@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101d32">
+  <meta name="description" content="NITAQ 360 - منصة إعلامية عراقية">
+  <title>NITAQ 360 | نطاق 360</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Tahoma, Arial, sans-serif;
+      background: #f3f5f8;
+      color: #17263d;
+      line-height: 1.8;
+    }
+
+    header {
+      background: #101d32;
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #19b6b0;
+    }
+
+    .logo small {
+      display: block;
+      font-size: 12px;
+      color: #c4d0df;
+      letter-spacing: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #19b6b0;
+    }
+
+    .breaking {
+      background: #e5eeee;
+      padding: 10px 6%;
+      border-right: 4px solid #19b6b0;
+      font-size: 13px;
+    }
+
+    .breaking strong {
+      color: #078c88;
+      margin-left: 10px;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, #101d32, #1c4560);
+      color: white;
+      padding: 75px 7%;
+      text-align: center;
+    }
+
+    .hero .label {
+      color: #19b6b0;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 55px);
+      margin: 15px 0;
+    }
+
+    .hero h1 span {
+      color: #19b6b0;
+    }
+
+    .hero p {
+      color: #d1dce8;
+      font-size: 16px;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 25px 15px;
+    }
+
+    .categories a {
+      background: white;
+      padding: 8px 20px;
+      border-radius: 25px;
+      color: #17263d;
+      text-decoration: none;
+      font-size: 13px;
+      border: 1px solid #e0e6ed;
+    }
+
+    .categories a:hover {
+      background: #101d32;
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px 50px;
+    }
+
+    .section-title {
+      margin: 30px 0 18px;
+      font-size: 25px;
+      border-right: 4px solid #19b6b0;
+      padding-right: 12px;
+    }
+
+    .featured {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px #14243b0c;
+    }
+
+    .featured-image {
+      min-height: 220px;
+      background: linear-gradient(120deg, #14243b, #24556a);
+      display: grid;
+      place-items: center;
+      color: #19b6b0;
+      font-size: 65px;
+      font-weight: bold;
+    }
+
+    .featured-content {
+      padding: 25px;
+    }
+
+    .tag {
+      color: #078c88;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .featured h3 {
+      font-size: 23px;
+      margin: 8px 0;
+    }
+
+    .featured p {
+      color: #758397;
+      font-size: 14px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .news-card {
+      background: white;
+      padding: 22px;
+      border-radius: 12px;
+      border: 1px solid #e5e9ef;
+    }
+
+    .news-card h3 {
+      font-size: 17px;
+      margin: 8px 0;
+    }
+
+    .news-card p {
+      color: #758397;
+      font-size: 13px;
+    }
+
+    .about {
+      background: #e8eff4;
+      padding: 30px;
+      border-radius: 14px;
+      margin-top: 40px;
+    }
+
+    .about h2 {
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      color: #65758a;
+      font-size: 14px;
+    }
+
+    footer {
+      background: #101d32;
+      color: #c4d0df;
+      padding: 25px;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: #19b6b0;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero {
+        padding: 55px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      NITAQ <span>360</span>
+      <small>نطاق 360</small>
+    </div>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#news">الأخبار</a>
+      <a href="#iraq">العراق</a>
+      <a href="#about">من نحن</a>
+    </nav>
+  </header>
+
+  <div class="breaking">
+    <strong>● نطاق 360</strong>
+    مرحباً بكم في منصتنا الإعلامية الجديدة
+  </div>
+
+  <section class="hero" id="home">
+    <div class="label">NITAQ 360 MEDIA</div>
+    <h1>العالم من <span>نطاق واحد</span></h1>
+    <p>نقل الحقيقة، ومتابعة الأحداث، ورؤية المشهد من جميع الزوايا.</p>
+  </section>
+
+  <div class="categories">
+    <a href="#news">آخر الأخبار</a>
+    <a href="#iraq">العراق</a>
+    <a href="#news">سياسة</a>
+    <a href="#news">اقتصاد</a>
+    <a href="#news">رياضة</a>
+    <a href="#news">ثقافة</a>
+  </div>
+
+  <main>
+    <h2 class="section-title">الخبر الرئيسي</h2>
+
+    <article class="featured">
+      <div class="featured-image">360°</div>
+      <div class="featured-content">
+        <span class="tag">NITAQ 360</span>
+        <h3>منصة نطاق 360 الإعلامية</h3>
+        <p>
+          مشروع إعلامي عراقي بطموح واسع، يسعى إلى تقديم
+          الأخبار والتقارير والتحليلات بمهنية وموضوعية.
+          هذه هي النسخة التجريبية الأولى لمنصتنا.
+        </p>
+      </div>
+    </article>
+
+    <h2 class="section-title" id="news">أحدث الأخبار</h2>
+
+    <div class="news-grid">
+      <article class="news-card" id="iraq">
+        <span class="tag">العراق</span>
+        <h3>الأخبار العراقية</h3>
+        <p>مساحة مخصصة لمتابعة الأحداث والتطورات في العراق.</p>
+      </article>
+
+      <article class="news-card">
+        <span class="tag">سياسة</span>
+        <h3>الأخبار السياسية</h3>
+        <p>تغطية سياسية وتقارير وتحليلات للأحداث.</p>
+      </article>
+
+      <article class="news-card">
+        <span class="tag">اقتصاد</span>
+        <h3>الأخبار الاقتصادية</h3>
+        <p>متابعة الأسواق والأعمال والملفات الاقتصادية.</p>
+      </article>
+
+      <article class="news-card">
+        <span class="tag">رياضة</span>
+        <h3>الأخبار الرياضية</h3>
+        <p>آخر أخبار الرياضة والبطولات والنتائج.</p>
+      </article>
+    </div>
+
+    <section class="about" id="about">
+      <h2>من نحن؟</h2>
+      <p>
+        NITAQ 360 - نطاق 360، مشروع إعلامي عراقي
+        قيد التطوير، يطمح إلى بناء مؤسسة إعلامية
+        متكاملة تشمل الموقع الإلكتروني والتطبيق والقناة الفضائية.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <strong>NITAQ 360</strong>
+    <p>نطاق 360 | جميع الحقوق محفوظة</p>
+  </footer>
+
+</body>
+</html>
