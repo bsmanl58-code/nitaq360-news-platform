@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071d35">
+<title>تفاصيل الخبر | NITAQ 360</title>
+
+<style>
+:root {
+  --navy: #071d35;
+  --blue: #123e60;
+  --teal: #19c6bd;
+  --bg: #f3f6f8;
+  --text: #172536;
+  --muted: #718096;
+  --border: #e2e9ef;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 18px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: var(--teal);
+}
+
+.logo small {
+  display: block;
+  font-size: 11px;
+  color: #b8cbd8;
+  letter-spacing: 3px;
+  font-weight: normal;
+}
+
+.header-note {
+  font-size: 13px;
+  color: #c7d8e5;
+}
+
+/* NAVIGATION */
+
+.navigation {
+  background: #0c2945;
+}
+
+.navigation .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navigation a {
+  padding: 13px 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.navigation a:hover {
+  background: var(--teal);
+  color: var(--navy);
+}
+
+/* ARTICLE */
+
+.article-wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.article-header {
+  padding: 30px 35px 20px;
+}
+
+.breadcrumb {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: #008f91;
+}
+
+.category {
+  display: inline-block;
+  color: #008f91;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.article-header h1 {
+  font-size: clamp(25px, 4vw, 38px);
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.article-summary {
+  color: #657587;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: #8995a2;
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+}
+
+.article-image {
+  width: 100%;
+  min-height: 260px;
+  background: linear-gradient(135deg, #123e60, #19c6bd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+}
+
+.article-content {
+  padding: 30px 35px;
+}
+
+.article-content h2 {
+  font-size: 23px;
+  margin-bottom: 15px;
+  color: var(--navy);
+}
+
+.article-content p {
+  font-size: 16px;
+  color: #45566a;
+  margin-bottom: 20px;
+}
+
+.article-note {
+  background: #edf7f7;
+  border-right: 4px solid var(--teal);
+  padding: 15px;
+  color: #526574;
+  font-size: 13px;
+  margin-top: 25px;
+}
+
+.article-actions {
+  padding: 0 35px 35px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.primary {
+  background: var(--teal);
+  color: var(--navy);
+}
+
+.secondary {
+  background: #edf2f6;
+  color: var(--blue);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--navy);
+  color: #b7c8d5;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 13px;
+}
+
+footer strong {
+  color: white;
+}
+
+footer span {
+  color: var(--teal);
+}
+
+/* MOBILE */
+
+@media(max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navigation .container {
+    justify-content: center;
+  }
+
+  .navigation a {
+    padding: 10px 8px;
+    font-size: 12px;
+  }
+
+  .article-wrapper {
+    width: 94%;
+    margin: 22px auto;
+  }
+
+  .article-header,
+  .article-content {
+    padding: 22px;
+  }
+
+  .article-actions {
+    padding: 0 22px 25px;
+  }
+
+  .article-image {
+    min-height: 190px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-content">
+    <a href="index.html" class="logo">
+      NITAQ <span>360</span>
+      <small>نطاق 360</small>
+    </a>
+
+    <div class="header-note">
+      العالم من نطاق واحد
+    </div>
+  </div>
+</header>
+
+<nav class="navigation">
+  <div class="container">
+    <a href="index.html">الرئيسية</a>
+    <a href="news.html">الأخبار</a>
+    <a href="news.html#iraq">العراق</a>
+    <a href="news.html#politics">السياسة</a>
+    <a href="news.html#economy">الاقتصاد</a>
+    <a href="news.html#sports">الرياضة</a>
+    <a href="index.html#about">من نحن</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <article class="article-wrapper">
+
+    <div class="article-header">
+
+      <div class="breadcrumb">
+        <a href="index.html">الرئيسية</a>
+        ←
+        <a href="news.html">الأخبار</a>
+        ← تفاصيل الخبر
+      </div>
+
+      <span class="category" id="articleCategory">
+        أخبار NITAQ 360
+      </span>
+
+      <h1 id="articleTitle">
+        مرحباً بك في صفحة الخبر
+      </h1>
+
+      <p class="article-summary" id="articleSummary">
+        هنا تظهر مقدمة الخبر وتفاصيله الرئيسية.
+      </p>
+
+      <div class="article-meta">
+        <span id="articleDate">تاريخ النشر: غير محدد</span>
+        <span>NITAQ 360</span>
+        <span>قسم التحرير</span>
+      </div>
+
+    </div>
+
+    <div class="article-image" id="articleImage">
+      NITAQ 360
+    </div>
+
+    <div class="article-content">
+
+      <h2>تفاصيل الخبر</h2>
+
+      <div id="articleBody">
+        <p>
+          هذه مساحة مخصصة لعرض النص الكامل للخبر.
+          سيتم ربطها ببيانات الأخبار في المرحلة القادمة.
+        </p>
+
+        <p>
+          تعمل منصة نطاق 360 على تقديم الأخبار والتقارير
+          من زوايا متعددة، ضمن رؤية إعلامية تهتم بالمعلومة
+          والتغطية المهنية.
+        </p>
+      </div>
+
+      <div class="article-note">
+        تنويه: هذه صفحة تجريبية. لا تمثل النصوص الافتراضية
+        أخباراً حقيقية أو منشورة.
+      </div>
+
+    </div>
+
+    <div class="article-actions">
+      <a href="news.html" class="button primary">
+        العودة إلى الأخبار
+      </a>
+
+      <a href="index.html" class="button secondary">
+        الصفحة الرئيسية
+      </a>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>NITAQ <span>360</span></strong>
+    <p>نطاق 360 — العالم من نطاق واحد</p>
+    <p>جميع الحقوق محفوظة © 2026</p>
+  </div>
+</footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const title = params.get("title");
+const category = params.get("category");
+const summary = params.get("summary");
+const date = params.get("date");
+
+if (title) {
+  document.getElementById("articleTitle").textContent = title;
+  document.title = title + " | NITAQ 360";
+}
+
+if (category) {
+  document.getElementById("articleCategory").textContent = category;
+}
+
+if (summary) {
+  document.getElementById("articleSummary").textContent = summary;
+}
+
+if (date) {
+  document.getElementById("articleDate").textContent =
+    "تاريخ النشر: " + date;
+}
+</script>
+
+</body>
+</html>
