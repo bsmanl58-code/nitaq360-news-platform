@@ -4,102 +4,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="آخر الأخبار والتغطيات في NITAQ 360">
+<meta name="theme-color" content="#071d35">
 <title>الأخبار | NITAQ 360</title>
+
 <style>
+:root {
+  --navy: #071d35;
+  --blue: #123e60;
+  --teal: #19c6bd;
+  --bg: #f3f6f8;
+  --text: #172536;
+  --muted: #718096;
+  --border: #e2e9ef;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: Tahoma, Arial, sans-serif;
-  background: #f3f6f8;
-  color: #172536;
+  background: var(--bg);
+  color: var(--text);
   line-height: 1.8;
 }
 
-header {
-  background: #071d35;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* HEADER */
+
+.top-header {
+  background: var(--navy);
   color: white;
-  padding: 20px 7%;
+  padding: 18px 0;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 20px;
 }
 
 .logo {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 27px;
+  font-weight: 900;
   letter-spacing: 1px;
 }
 
 .logo span {
-  color: #19c6bd;
+  color: var(--teal);
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 14px;
+.logo small {
+  display: block;
+  font-size: 11px;
+  color: #b8cbd8;
+  letter-spacing: 3px;
+  font-weight: normal;
 }
 
-nav a:hover {
-  color: #19c6bd;
+.header-note {
+  font-size: 13px;
+  color: #c7d8e5;
 }
 
-.hero {
-  background: linear-gradient(120deg, #071d35, #123e60);
-  color: white;
-  padding: 55px 7%;
+/* NAVIGATION */
+
+.navigation {
+  background: #0c2945;
+  border-top: 1px solid #23425c;
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  color: #c9d9e5;
-}
-
-.container {
-  width: 86%;
-  max-width: 1200px;
-  margin: 40px auto;
-}
-
-.section-title {
-  border-right: 5px solid #19c6bd;
-  padding-right: 14px;
-  margin-bottom: 25px;
-  font-size: 23px;
-}
-
-.categories {
+.navigation .container {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 30px;
 }
 
-.categories a {
-  background: white;
-  padding: 9px 18px;
-  border-radius: 6px;
-  color: #123e60;
-  text-decoration: none;
-  border: 1px solid #dce5eb;
+.navigation a {
+  display: block;
+  padding: 13px 16px;
+  color: white;
   font-size: 14px;
+  transition: 0.2s;
 }
 
-.categories a:hover {
-  background: #19c6bd;
-  color: #071d35;
+.navigation a:hover,
+.navigation a.active {
+  background: var(--teal);
+  color: var(--navy);
 }
+
+/* BREAKING NEWS */
+
+.breaking {
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.breaking-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 48px;
+  font-size: 13px;
+}
+
+.breaking-label {
+  background: #d92535;
+  color: white;
+  padding: 4px 13px;
+  border-radius: 3px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.breaking-text {
+  color: #566577;
+}
+
+/* PAGE INTRO */
+
+.page-hero {
+  background: linear-gradient(120deg, #071d35, #16476a);
+  color: white;
+  padding: 50px 0;
+}
+
+.page-hero h1 {
+  font-size: clamp(30px, 5vw, 42px);
+  margin-bottom: 8px;
+}
+
+.page-hero p {
+  color: #d0dce6;
+  font-size: 15px;
+}
+
+/* CATEGORY NAV */
+
+.category-navigation {
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.category-navigation .container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.category-navigation a {
+  white-space: nowrap;
+  background: #f0f5f7;
+  padding: 7px 15px;
+  border-radius: 5px;
+  color: #23445d;
+  font-size: 13px;
+}
+
+.category-navigation a:hover {
+  background: var(--teal);
+  color: var(--navy);
+}
+
+/* CONTENT */
+
+.section {
+  padding: 40px 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: 22px;
+  border-right: 5px solid var(--teal);
+  padding-right: 13px;
+}
+
+.section-description {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: -12px;
+  margin-bottom: 22px;
+}
+
+/* NEWS GRID */
 
 .news-grid {
   display: grid;
@@ -109,72 +224,113 @@ nav a:hover {
 
 .news-card {
   background: white;
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.05);
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .news-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
 }
 
 .news-image {
-  height: 190px;
+  height: 185px;
   background: linear-gradient(135deg, #123e60, #19c6bd);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
 }
 
-.news-content {
-  padding: 20px;
+.news-body {
+  padding: 19px;
 }
 
-.tag {
+.category {
   color: #008f91;
   font-size: 12px;
   font-weight: bold;
 }
 
-.news-content h3 {
-  margin: 10px 0;
-  font-size: 19px;
+.news-body h3 {
+  font-size: 18px;
+  margin: 9px 0;
 }
 
-.news-content p {
-  color: #697987;
+.news-body p {
+  color: var(--muted);
   font-size: 14px;
 }
 
-.news-content a {
-  display: inline-block;
-  margin-top: 15px;
-  color: #008f91;
-  text-decoration: none;
-  font-weight: bold;
+.news-meta {
+  color: #98a5b1;
+  font-size: 11px;
+  margin-top: 12px;
 }
 
-.empty-note {
-  background: white;
-  padding: 25px;
-  margin-top: 25px;
-  border-radius: 10px;
-  color: #697987;
-  text-align: center;
+/* ABOUT */
+
+.about {
+  background: #e9f1f5;
+  padding: 45px 0;
 }
+
+.about h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.about p {
+  color: #536779;
+  max-width: 800px;
+  font-size: 14px;
+}
+
+/* FOOTER */
 
 footer {
-  background: #071d35;
-  color: #b9cbd8;
-  padding: 30px 7%;
-  text-align: center;
-  margin-top: 60px;
-  font-size: 13px;
+  background: var(--navy);
+  color: #c4d2dd;
+  padding: 35px 0 20px;
 }
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+footer h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+footer p,
+footer a {
+  font-size: 13px;
+  color: #b7c8d5;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #29445d;
+  padding-top: 17px;
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+/* MOBILE */
 
 @media(max-width: 800px) {
   .news-grid {
@@ -183,20 +339,30 @@ footer {
 }
 
 @media(max-width: 550px) {
-  header {
+  .header-content {
     flex-direction: column;
+    text-align: center;
   }
-  nav a {
-    margin: 0 5px;
+
+  .navigation .container {
+    justify-content: center;
   }
-  .hero h1 {
-    font-size: 27px;
+
+  .navigation a {
+    padding: 10px 9px;
+    font-size: 12px;
   }
+
   .news-grid {
     grid-template-columns: 1fr;
   }
-  .container {
-    width: 92%;
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .breaking-text {
+    font-size: 11px;
   }
 }
 </style>
@@ -204,25 +370,54 @@ footer {
 
 <body>
 
-<header>
-  <div class="logo">NITAQ <span>360</span></div>
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="news.html">الأخبار</a>
-    <a href="index.html#about">من نحن</a>
-  </nav>
+<header class="top-header">
+  <div class="container header-content">
+    <a href="index.html" class="logo">
+      NITAQ <span>360</span>
+      <small>نطاق 360</small>
+    </a>
+
+    <div class="header-note">
+      منصة إعلامية تتابع الحدث من جميع الزوايا
+    </div>
+  </div>
 </header>
 
-<section class="hero">
-  <h1>آخر الأخبار</h1>
-  <p>نطاق 360.. نتابع الحدث من جميع الزوايا.</p>
+<nav class="navigation">
+  <div class="container">
+    <a href="index.html">الرئيسية</a>
+    <a href="news.html" class="active">الأخبار</a>
+    <a href="#iraq">العراق</a>
+    <a href="#politics">السياسة</a>
+    <a href="#economy">الاقتصاد</a>
+    <a href="#sports">الرياضة</a>
+    <a href="#culture">الثقافة</a>
+    <a href="#technology">التكنولوجيا</a>
+    <a href="index.html#about">من نحن</a>
+  </div>
+</nav>
+
+<div class="breaking">
+  <div class="container breaking-content">
+    <span class="breaking-label">عاجل</span>
+    <span class="breaking-text">
+      NITAQ 360 — العالم من نطاق واحد
+    </span>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>مركز الأخبار</h1>
+    <p>
+      تابع آخر الأخبار والتطورات من العراق والعالم،
+      وتصفح مختلف المجالات من مكان واحد.
+    </p>
+  </div>
 </section>
 
-<main class="container">
-
-  <h2 class="section-title">تصفح حسب القسم</h2>
-
-  <div class="categories">
+<nav class="category-navigation">
+  <div class="container">
     <a href="#iraq">العراق</a>
     <a href="#politics">السياسة</a>
     <a href="#economy">الاقتصاد</a>
@@ -230,83 +425,236 @@ footer {
     <a href="#culture">الثقافة</a>
     <a href="#technology">التكنولوجيا</a>
   </div>
+</nav>
 
-  <h2 class="section-title">أحدث الأخبار</h2>
+<main>
 
-  <div class="news-grid">
+<section class="section" id="iraq">
+  <div class="container">
+    <div class="section-heading">
+      <h2>أخبار العراق</h2>
+    </div>
+    <p class="section-description">
+      متابعة الشأن العراقي وأبرز الأحداث في المحافظات.
+    </p>
 
-    <article class="news-card" id="iraq">
-      <div class="news-image">NITAQ 360</div>
-      <div class="news-content">
-        <span class="tag">العراق</span>
-        <h3>أخبار العراق من نطاق 360</h3>
-        <p>تابع آخر المستجدات والأحداث المحلية في مختلف المحافظات العراقية.</p>
-        <a href="#">اقرأ المزيد ←</a>
-      </div>
-    </article>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-image">NITAQ 360</div>
+        <div class="news-body">
+          <span class="category">العراق</span>
+          <h3>آخر المستجدات في الشأن العراقي</h3>
+          <p>مساحة مخصصة لنشر الأخبار والتقارير المتعلقة بالعراق.</p>
+          <div class="news-meta">محتوى تجريبي — بانتظار نشر الأخبار</div>
+        </div>
+      </article>
 
-    <article class="news-card" id="politics">
-      <div class="news-image">NITAQ 360</div>
-      <div class="news-content">
-        <span class="tag">السياسة</span>
-        <h3>المشهد السياسي</h3>
-        <p>تغطية وتحليلات لأبرز التطورات السياسية محلياً وإقليمياً.</p>
-        <a href="#">اقرأ المزيد ←</a>
-      </div>
-    </article>
+      <article class="news-card">
+        <div class="news-image">NITAQ 360</div>
+        <div class="news-body">
+          <span class="category">العراق</span>
+          <h3>أخبار المحافظات العراقية</h3>
+          <p>تغطية الأحداث والخدمات والمشاريع في المحافظات.</p>
+          <div class="news-meta">محتوى تجريبي — بانتظار نشر الأخبار</div>
+        </div>
+      </article>
 
-    <article class="news-card" id="economy">
-      <div class="news-image">NITAQ 360</div>
-      <div class="news-content">
-        <span class="tag">الاقتصاد</span>
-        <h3>الاقتصاد والأسواق</h3>
-        <p>متابعة المؤشرات الاقتصادية والأسواق والملفات المالية.</p>
-        <a href="#">اقرأ المزيد ←</a>
-      </div>
-    </article>
-
-    <article class="news-card" id="sports">
-      <div class="news-image">NITAQ 360</div>
-      <div class="news-content">
-        <span class="tag">الرياضة</span>
-        <h3>أخبار الرياضة</h3>
-        <p>أبرز الأحداث الرياضية والبطولات والنتائج.</p>
-        <a href="#">اقرأ المزيد ←</a>
-      </div>
-    </article>
-
-    <article class="news-card" id="culture">
-      <div class="news-image">NITAQ 360</div>
-      <div class="news-content">
-        <span class="tag">الثقافة</span>
-        <h3>الثقافة والمجتمع</h3>
-        <p>قصص ومبادرات وموضوعات ثقافية ومجتمعية.</p>
-        <a href="#">اقرأ المزيد ←</a>
-      </div>
-    </article>
-
-    <article class="news-card" id="technology">
-      <div class="news-image">NITAQ 360</div>
-      <div class="news-content">
-        <span class="tag">التكنولوجيا</span>
-        <h3>عالم التكنولوجيا</h3>
-        <p>آخر الابتكارات والتطورات في عالم التقنية والذكاء الاصطناعي.</p>
-        <a href="#">اقرأ المزيد ←</a>
-      </div>
-    </article>
-
+      <article class="news-card">
+        <div class="news-image">NITAQ 360</div>
+        <div class="news-body">
+          <span class="category">العراق</span>
+          <h3>تقارير ومتابعات محلية</h3>
+          <p>ملفات وتقارير خاصة حول القضايا المحلية.</p>
+          <div class="news-meta">محتوى تجريبي — بانتظار نشر الأخبار</div>
+        </div>
+      </article>
+    </div>
   </div>
+</section>
 
-  <div class="empty-note">
-    هذه واجهة تجريبية للأقسام، وسيتم ربطها بالأخبار الفعلية في المراحل القادمة.
+<section class="section" id="politics" style="background:#fff;">
+  <div class="container">
+    <div class="section-heading">
+      <h2>السياسة</h2>
+    </div>
+    <p class="section-description">
+      الأخبار السياسية والتحليلات والمواقف المحلية والدولية.
+    </p>
+
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-image">POLITICS 360</div>
+        <div class="news-body">
+          <span class="category">السياسة</span>
+          <h3>المشهد السياسي العراقي</h3>
+          <p>متابعة الملفات السياسية والتطورات الحكومية والبرلمانية.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-image">POLITICS 360</div>
+        <div class="news-body">
+          <span class="category">السياسة</span>
+          <h3>العلاقات الإقليمية والدولية</h3>
+          <p>تغطية التحركات والعلاقات السياسية بين الدول.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+    </div>
   </div>
+</section>
+
+<section class="section" id="economy">
+  <div class="container">
+    <div class="section-heading">
+      <h2>الاقتصاد</h2>
+    </div>
+    <p class="section-description">
+      الأسواق والمال والأعمال والمؤشرات الاقتصادية.
+    </p>
+
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-image">ECONOMY 360</div>
+        <div class="news-body">
+          <span class="category">الاقتصاد</span>
+          <h3>الاقتصاد والأسواق العراقية</h3>
+          <p>مساحة لمتابعة حركة الأسواق والملفات الاقتصادية.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-image">ECONOMY 360</div>
+        <div class="news-body">
+          <span class="category">الاقتصاد</span>
+          <h3>المال والأعمال والاستثمار</h3>
+          <p>تغطية عالم الأعمال والمشاريع والاستثمار.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="sports" style="background:#fff;">
+  <div class="container">
+    <div class="section-heading">
+      <h2>الرياضة</h2>
+    </div>
+    <p class="section-description">
+      البطولات والنتائج والأندية والمنتخبات.
+    </p>
+
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-image">SPORTS 360</div>
+        <div class="news-body">
+          <span class="category">الرياضة</span>
+          <h3>الكرة العراقية</h3>
+          <p>متابعة الدوري العراقي والأندية والمنتخبات.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <div class="news-image">SPORTS 360</div>
+        <div class="news-body">
+          <span class="category">الرياضة</span>
+          <h3>الرياضة العالمية</h3>
+          <p>أخبار البطولات والأحداث الرياضية الدولية.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="culture">
+  <div class="container">
+    <div class="section-heading">
+      <h2>الثقافة والمجتمع</h2>
+    </div>
+    <p class="section-description">
+      الثقافة والفنون والموضوعات المجتمعية.
+    </p>
+
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-image">CULTURE 360</div>
+        <div class="news-body">
+          <span class="category">الثقافة</span>
+          <h3>الثقافة والفنون</h3>
+          <p>تغطية الفعاليات الثقافية والفنية والإبداعية.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="technology" style="background:#fff;">
+  <div class="container">
+    <div class="section-heading">
+      <h2>التكنولوجيا</h2>
+    </div>
+    <p class="section-description">
+      التقنية والابتكار والذكاء الاصطناعي.
+    </p>
+
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-image">TECH 360</div>
+        <div class="news-body">
+          <span class="category">التكنولوجيا</span>
+          <h3>أحدث التطورات التقنية</h3>
+          <p>متابعة الابتكارات والتحولات في عالم التكنولوجيا.</p>
+          <div class="news-meta">محتوى تجريبي</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <h2>NITAQ 360 | نطاق 360</h2>
+    <p>
+      منصة إعلامية تسعى إلى متابعة الأحداث من زوايا متعددة،
+      وتقديم الأخبار والتقارير والتحليلات ضمن هوية إعلامية موحدة.
+    </p>
+    <br>
+    <a href="index.html" style="color:#008f91;font-weight:bold;">
+      العودة إلى الصفحة الرئيسية ←
+    </a>
+  </div>
+</section>
 
 </main>
 
 <footer>
-  <div class="logo">NITAQ <span>360</span></div>
-  <p>نطاق 360 | العالم من نطاق واحد</p>
-  <p>جميع الحقوق محفوظة © 2026</p>
+  <div class="container">
+    <div class="footer-content">
+      <div>
+        <h3>NITAQ <span style="color:#19c6bd;">360</span></h3>
+        <p>نطاق 360 — العالم من نطاق واحد.</p>
+      </div>
+
+      <div>
+        <h3>روابط الموقع</h3>
+        <div class="footer-links">
+          <a href="index.html">الرئيسية</a>
+          <a href="news.html">الأخبار</a>
+          <a href="index.html#about">من نحن</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      جميع الحقوق محفوظة © 2026 NITAQ 360
+    </div>
+  </div>
 </footer>
 
 </body>
